@@ -38,17 +38,17 @@ export const Home = () => {
   return show ?  <EditWindow show = {show} setshow = {setshow} toggleShow = {toggleShow} item = {item}/> : (
     <>
 
-      <div className="buttons">
-        <Button onClick = {() => {dispatch(srtPopAsc())}} variant="contained" color="primary">
-          Sort By Population (ASC)
+      <div className="buttons" >
+        <Button onClick = {() => {dispatch(srtPopAsc())}}  style={{background:"skyblue"}}>
+          Sort population ascending
         </Button>
-        <Button onClick = {() => {dispatch(srtPopDesc())}} variant="contained" color="success">
-        Sort By Population (DSC)
+        <Button onClick = {() => {dispatch(srtPopDesc())}} style={{background:"skyblue"}}>
+        Sort population decending
         </Button>
 
-        <TextField onChange = {(e) => (setquery(e.target.value))} id="outlined-basic" label="Enter Country" variant="outlined" />
+        <TextField onChange = {(e) => (setquery(e.target.value))} id="outlined-basic" label="Enter Country Name" variant="outlined" />
         <Button onClick = {() => {handleFilter(query)}} variant="contained" color="secondary">
-          Filter By Country
+          Filter By Country Name
         </Button>
       </div>
       <Table toggleShow = {toggleShow} show = {show} setshow = {setshow} style={{ margin: "auto" }}></Table>

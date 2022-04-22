@@ -41,13 +41,13 @@ export const Cities = () => {
   };
   return (
     <>
-      <h2 style={{ color: "blue" }}>Add City Of Your Choice</h2>
+      <h2 style={{ color: "green" }}>Add City</h2>
       <form onSubmit={handleSubmit}>
         <input
           onChange={handleChange}
           id="city"
           type="text"
-          placeholder="Add City Name"
+          placeholder="Add City"
           required
         />
           <select onChange={handleChange} id="country">
@@ -65,7 +65,7 @@ export const Cities = () => {
           placeholder="Add Population"
           required
         />
-        <input type="submit" />
+        <input type="submit"  style={{background:"teal"}}/>
       </form>
     </>
   );

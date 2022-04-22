@@ -38,26 +38,23 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+    <AppBar position="static" style={{background:"red"}}> 
+      <Container >
+        <Toolbar >
           <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
-            Cities & Countries
+            Countries and Cities
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
+             
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="success"
             >
               <MenuIcon />
             </IconButton>
@@ -75,9 +72,7 @@ const ResponsiveAppBar = () => {
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
+             
             >
               {pages.map((page) => (
                 <MenuItem key={page.page} onClick={handleCloseNavMenu}>
@@ -118,15 +113,9 @@ const ResponsiveAppBar = () => {
               sx={{ mt: '45px' }}
               id="menu-appbar"
               anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
+             
               keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
+              
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
@@ -139,7 +128,10 @@ const ResponsiveAppBar = () => {
           </Box>
         </Toolbar>
       </Container>
+      
     </AppBar>
   );
 };
+
+
 export default ResponsiveAppBar;

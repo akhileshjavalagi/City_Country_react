@@ -26,15 +26,15 @@ import {useSelector, useDispatch} from "react-redux";
   }, []);
   console.log(data)
   return (
-    <table border="1px solid black">
-      <thead>
+    <table style={{border:"2px solid yellow"}}>
+      <thead >
         <tr>
-          <th>id</th>
-          <th>Country</th>
-          <th>City</th>
-          <th>Population</th>
-          <th>Edit</th>
-          <th>Delete</th>
+          <th style={{backgroundColor:"red"}}>id</th>
+          <th style={{backgroundColor:"red"}}>Country</th>
+          <th style={{backgroundColor:"red"}}>City</th>
+          <th style={{backgroundColor:"red"}}>Population</th>
+          <th style={{backgroundColor:"red"}}>Edit</th>
+          <th style={{backgroundColor:"red"}}>Delete</th>
         </tr>
       </thead>
       <tbody>
@@ -45,10 +45,10 @@ import {useSelector, useDispatch} from "react-redux";
             <td>{e.city}</td>
             <td>{e.population}</td>
             <td>
-              <button onClick = {() => {toggleShow(e)}} style = {{backgroundColor: "green", color: "white", fontWeight: "bold", fontSize: "14px", borderRadius:"3px"}}>Edit</button>
+              <button onClick = {() => {toggleShow(e)}} style = {{backgroundColor: "gray", color: "white", fontSize: "10px", borderRadius:"2px"}}>Edit</button>
             </td>
             <td>
-              <button onClick = {() => {handleDelete(e.id)}} style = {{backgroundColor: "red", color: "white", fontWeight: "bold", fontSize: "14px", borderRadius:"3px"}}>Delete</button>
+              <button onClick = {() => {handleDelete(e.id)}} style = {{backgroundColor: "gray", color: "white", fontSize: "10px", borderRadius:"2px"}}>Delete</button>
             </td>
           </tr>
         ))}
